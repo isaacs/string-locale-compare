@@ -28,9 +28,7 @@ t.test('sorts with Intl.Collator', {
   t.end()
 })
 
-t.test('sorts with String.localeCompare', {
-  skip: typeof Intl !== 'object' ? 'intl not available' : false,
-}, t => {
+t.test('sorts with String.localeCompare', t => {
   const Intl = global.Intl
   t.teardown(() => global.Intl = Intl)
   global.Intl = null
