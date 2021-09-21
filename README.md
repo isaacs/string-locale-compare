@@ -1,4 +1,4 @@
-# string-locale-compare
+# @isaacs/string-locale-compare
 
 Compare strings with Intl.Collator if available, falling back to
 String.localeCompare otherwise.
@@ -9,7 +9,7 @@ locale, which is non-deterministic.
 ## USAGE
 
 ```js
-const stringLocaleCompare = require('string-locale-compare')
+const stringLocaleCompare = require('@isaacs/string-locale-compare')
 
 myArrayOfStrings.sort(stringLocaleCompare('en'))
 ```
