@@ -12,4 +12,20 @@ locale, which is non-deterministic.
 const stringLocaleCompare = require('@isaacs/string-locale-compare')
 
 myArrayOfStrings.sort(stringLocaleCompare('en'))
+
+// can also pass extra options
+myArrayOfNumericStrings.sort(stringLocaleCompare('en', { numeric: true }))
 ```
+
+## API
+
+`stringLocaleCompare(locale, [options])`
+
+Locale is required, must be a valid locale string.
+
+Options is optional.  The following options are supported:
+
+* `sensitivity`
+* `numeric`
+* `ignorePunctuation`
+* `caseFirst`
